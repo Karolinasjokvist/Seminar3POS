@@ -69,6 +69,13 @@ public class ControllerTest {
 
         assertEquals("Item was not Identified", itemInfo.getDescription(), 
                     saleInfoDTO.getItemDescription());
+
+
+        itemInfo = new ItemDTO(null, "description", 0, 0, "0000");
+        saleInfoDTO = instance.identifyItem(itemInfo.getIdentifier());
+            
+        assertEquals("Item was not Identified", itemInfo.getDescription(), 
+                    saleInfoDTO.getItemDescription());
     }
 
 
